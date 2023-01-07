@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/feedback.css">
+    <link rel="stylesheet" href="./assets/fonts/themify-icons-font/themify-icons.css">
+    <script src="./assets/main.js "></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="header-back">
+                <p><i class="ti-bag"></i>Shopee</p>
+            </div>
+            <div class="introduce">
+                <h2>Đội chăm sóc khách hàng Shopee</h2>
+                <p>Chúng tôi luôn lắng nghe những đóng góp và ý kiến từ bạn. Hãy phản hồi cho Shoppe biết vấn đề của bạn nhé! Chúng tôi sẽ liên hệ lại bạn trong 24h tiếp theo.</p>
+            </div>
+        </div>
+
+         <form class="content" id="feedback-form"> 
+            <div class=" com-padding content-container fb-problem ">
+                <label for="">* Bạn thắc mắc vấn đề nào</label>
+                <select id="problem-select" name="Select" >
+                    <option class="specific-problem" value="1">Giao hàng và nhận hàng</option>
+                    <option class="specific-problem" value="2">Trả hàng và hoàn tiền</option>
+                    <option class="specific-problem" value="3">Thanh toán</option>
+                    <option class="specific-problem" id="app-error" value="4">Báo lỗi</option>
+                    <option class="specific-problem" value="5">Câu hỏi chung</option>
+                  </select>
+            </div>
+
+            <div class="com-padding content-container">
+                <label for="">* Tên đăng nhập</label>
+                <input type="text" id ="user-name"placeholder="Input" required>
+            </div>
+
+            <div class="com-padding content-container">
+                <label for="">* Địa chỉ email của bạn</label>
+                <input type="email" id ="email" placeholder="Input" required>
+            </div>
+
+            <div class="com-padding content-container id-order">
+                <label for="">* ID đơn hàng</label>
+                <span class="fb-btn" id="open-order-btn">Chọn đơn hàng</span>
+                <input id="input-id-order" type="text" readonly>
+            </div>
+            <div class="com-padding content-container fb-content">
+                <label for="">* Nội dung phản hồi</label>
+                <p>Điền thêm nội dung chi tiết thắc mắc/ vấn đề của bạn</p>
+                <textarea name="" id="problem-description" form="feedback-form" cols="30" rows="10" placeholder="Input" required></textarea>
+            </div>
+
+            <div class="com-padding content-container up-file">
+                <label for="">* Tải tệp tin lên</label>
+                <p>Bạn có thể đính kèm tối đa 5 tệp với đuôi là jpg / jpeg / png / pdf / mp4 / xls / xlsx / csv / zip / doc / docx. Dung lượng mỗi tệp không quá 10 MB.</p>
+                <!-- <button>
+                    <i class="ti-cloud-up"></i>
+                    <span>Nhấn để tải lên(0/5)</span>
+                </button> -->
+            </div>
+
+            <div class="send-button">
+                <button type="submit" >Gửi</button>
+            </div>       
+        </form>
+       
+    </div>
+    <div class="modal">
+        <div class="order-component">
+
+            <div class="order-header">
+                <h4>Danh sách đơn hàng</h4>
+                <i class="ti-close close-btn"></i>
+                <div class="order-option click-on" id="done-label">
+                    <p>Đã giao</p>
+                </div>
+                <div class="order-option left" id="shipping-label">
+                    <p>Đang giao</p>
+                </div>
+
+            </div>
+
+            <div id="done-list" class="order-list">
+
+            </div>
+            <div id="shipping-list" class=" order-list">
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+</html>
